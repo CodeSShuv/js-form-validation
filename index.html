@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Sign Up! </div>
+        <form onsubmit="return validate()">
+            <div class="input-b">
+                <input  type="text"   id="user"/>
+                <label class="placeholder" for="user" id="username"> Username</label>
+            </div>
+            <span id="msg"></span>
+            <div class="input-b">
+                <input  type="password"  id="pass"  oninput="passStrength()"/>
+                <label class="placeholder" for="pass" id="password"> Password</label>
+            </div>
+            <span id="passId">
+                <div class="line">
+                    <div id="weak">Weak</div>
+                    <div id="medium">Medium</div>
+                    <div id="strong">Strong</div>
+                    <div id="verystrong">Very strong</div>
+                </div>
+            </span>
+            <div class="submit-btn">
+                <input type="submit" value="Submit"/>
+            </div>
+            
+            <script src="validate.js"></script>
+        </form>
+    </div>
+</body>
+</html>

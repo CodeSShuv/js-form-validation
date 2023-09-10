@@ -1,0 +1,141 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgb(202, 200, 200);
+    height: 20rem;
+}
+form{
+    display: flex;
+    flex-flow: column;
+}
+.heading{
+    font-size: 2rem;
+    color: rgb(82, 127, 211);
+    font-weight: bold;
+}
+.input-b input{
+    border:  none;
+    font-size: medium;
+    width: 15rem;
+    height: 1.8rem;
+}
+.input-b input:focus{
+    border: none;
+    outline: none;
+}
+.input-b{
+    background-color: white;
+    /* height: 1rem; */
+    padding:.3rem;
+    margin: 1rem;
+    line-height: 1rem;
+    position: relative;
+    outline: 1px solid rgba(128, 128, 128, 0.212);
+    
+}
+.placeholder{
+    
+    position: absolute;
+    top: .8rem;
+    left: .4rem;
+    /* color: rgb(82, 127, 211); */
+    color: gray;
+    transition: all .5s ease-in-out;
+    
+}
+.input-b:focus-within{
+    outline: 1px solid rgb(82, 127, 211);
+}
+.input-b:focus-within .placeholder{
+    top: -1rem;
+    font-size: small;
+    color: rgb(82, 127, 211);
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+.input-b input:valid ~ .placeholder{
+    top: -1rem;
+    font-size: small;
+    color: rgb(82, 127, 211);
+    background-color: white;
+}
+
+.submit-btn{
+    background-color: rgb(82, 127, 211);
+    width: 10rem;
+    margin: auto;
+    text-align: center;
+    
+}
+.submit-btn input{
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+    color: white;
+    padding: .5rem;
+    margin:.2rem;
+    
+}
+.hasContent{
+    top: -1rem;
+    font-size: small;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+#msg{
+    font-size: .7rem;
+    padding: 1rem;
+    color: red;
+}
+#passId{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    padding: .5rem;
+    border-radius: 2rem;
+}
+#passId .line{
+    font-size: .7rem;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+#weak{
+    background-color: red;
+    padding: .3rem;
+    display: none;
+}
+#medium{
+    background-color: orange;
+    padding: .3rem;
+    display: none;
+}
+#strong{
+    background-color: green;
+    padding: .3rem;
+    display: none;
+}
+#verystrong{
+    background-color: rgb(82, 127, 211);
+    padding: .3rem;
+    display: none;
+}
